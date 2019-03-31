@@ -1,2 +1,2 @@
 # Travel-gram
-Find yourdream destination
+Find your dream destination
