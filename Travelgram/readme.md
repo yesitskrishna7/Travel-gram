@@ -1,3 +1,3 @@
 # Travelgram
 
-### Refactored by Ian Schoonover
+### Find Your Dream Destination
