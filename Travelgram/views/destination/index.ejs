@@ -1,0 +1,36 @@
+<% include ../partials/header %> 
+
+     <header class="jumbotron">
+         <div class="container">
+             <h1><span class="glyphicon glyphicon-tent"></span> Welcome To Travelgram!</h1>
+             <p>View our hand-picked destination from all over the world</p>
+             <p>
+                <a class="btn btn-primary btn-lg" href="/destination/new">Add New Destination</a>
+             </p>
+              <p>
+              <form action="/destination" method="GET" class="form-inline" id="destination-search">
+                <div class="form-group">
+                  <input type="text" name="search" placeholder="Destination search..." class="form-control">
+                </div>
+              </form>
+             </p>
+         </div>
+     </header>
+     
+     <div class="row text-center flex-wrap" id="destination-grid">
+        <% destination.forEach(function(destination){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                   <img src="<%= destination.image %>">
+                   <div class="caption">
+                       <h4><%= destination.name %></h4>
+                   </div>
+                   <p>
+                       <a href="/destination/<%= destination._id %>" class="btn btn-primary">More Info</a>
+                   </p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+
+<% include ../partials/footer %>
